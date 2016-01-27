@@ -1,0 +1,13 @@
+if [[ -z ${1} || "${1}" == "-h" || "${1}" == "--help" ]]; then
+    echo -e "Usage: ${0} -ie [additional grep parameter]
+Help: Show external or internal IP address.
+Options:
+  -i                Show internal IP address. Additional parameter to be grepped for can be specified.
+  -e                Show external IP address."
+elif [[ "${1}" == "-i" ]]; then
+    ifconfig | grep -Eo 'inet (ad)?([0-9]*\.){3}[0-9]*' | grep -Eo '([0-9]*\.){3}[0-9]*' | grep -v '127.0.0.1' | grep "${2}"
+elif [[ "${1}" == "-e" ]]; then
+    curl -s https://4.ifcfg.me/
+else
+    echo -e "Unrecognized parameter: ${1}\nTry '${0} --help'"
+fi
