@@ -10,12 +10,16 @@ case $i in
     -e|--external)
         curl -s https://4.ifcfg.me/
     ;;
+    -v6|--ipv6)
+        ifconfig | grep -Eo 'inet6 (Adresse: |address: |addr: )?[0-9a-z:]*' | grep -Eo '([0-9A-Za-z]*\:){1,10}[0-9A-Za-z]*' | grep -v '::1'
+    ;;
     -h|--help)
         echo "Usage: ${0} [-e] [-i]"
         echo "Help: Show external or internal IP address."
         echo "Options:"
         echo "  -i, --internal    Show internal IP address. Additional parameter to be grepped for can be specified"
         echo "  -e, --external    Show external IP address."
+        echo "  -v6, --ipv6       Show IPv6 address."
     ;;
     *)
         echo -e "Unrecognized parameter: ${i}\nTry '${0} --help'"
