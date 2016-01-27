@@ -1,3 +1,6 @@
+if [[ "$@" == "" ]]; then
+    ${0} -h
+fi
 for i in "$@"
 do
 case $i in
