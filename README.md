@@ -15,7 +15,7 @@ showip -e # Show external IP address
 
 ```sh
 sudo curl https://raw.githubusercontent.com/emazzotta/showip/master/showip > /usr/bin/showip
-sudo chmod u+x /usr/bin/showip
+sudo chmod ug+x /usr/bin/showip
 ```
 
 ## Dependencies
