@@ -5,7 +5,7 @@ Options:
   -i                Show internal IP address. Additional parameter to be grepped for can be specified.
   -e                Show external IP address."
 elif [[ "${1}" == "-i" ]]; then
-    ifconfig | grep -Eo 'inet (ad)?([0-9]*\.){3}[0-9]*' | grep -Eo '([0-9]*\.){3}[0-9]*' | grep -v '127.0.0.1' | grep "${2}"
+    ifconfig | grep -Eo 'inet (Adresse:|address:)?([0-9]*\.){3}[0-9]*' | grep -Eo '([0-9]*\.){3}[0-9]*' | grep -v '127.0.0.1' | grep "${2}"
 elif [[ "${1}" == "-e" ]]; then
     curl -s https://4.ifcfg.me/
 else
