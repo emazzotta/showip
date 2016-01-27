@@ -1,6 +1,7 @@
 # ShowIP
 
-A "as simple as it gets" script to determine your machine's internal and external ip address
+A simple script to determine your machine's internal and external IP address.
+
 An internet connection is needed, to determine the external ip address (duh).
 
 ## Usage
