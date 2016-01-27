@@ -1,13 +1,21 @@
-if [[ -z ${1} || "${1}" == "-h" || "${1}" == "--help" ]]; then
-    echo -e "Usage: ${0} -ie [additional grep parameter]
-Help: Show external or internal IP address.
-Options:
-  -i                Show internal IP address. Additional parameter to be grepped for can be specified.
-  -e                Show external IP address."
-elif [[ "${1}" == "-i" ]]; then
-    ifconfig | grep -Eo 'inet (Adresse:|address:|addr:)?([0-9]*\.){3}[0-9]*' | grep -Eo '([0-9]*\.){3}[0-9]*' | grep -v '127.0.0.1' | grep "${2}"
-elif [[ "${1}" == "-e" ]]; then
-    curl -s https://4.ifcfg.me/
-else
-    echo -e "Unrecognized parameter: ${1}\nTry '${0} --help'"
-fi
+for i in "$@"
+do
+case $i in
+    -i|--internal)
+        ifconfig | grep -Eo 'inet (Adresse:|address:|addr:)?([0-9]*\.){3}[0-9]*' | grep -Eo '([0-9]*\.){3}[0-9]*' | grep -v '127.0.0.1'
+    ;;
+    -e|--external)
+        curl -s https://4.ifcfg.me/
+    ;;
+    -h|--help)
+        echo "Usage: ${0} [-e] [-i]"
+        echo "Help: Show external or internal IP address."
+        echo "Options:"
+        echo "  -i, --internal    Show internal IP address. Additional parameter to be grepped for can be specified"
+        echo "  -e, --external    Show external IP address."
+    ;;
+    *)
+        echo -e "Unrecognized parameter: ${i}\nTry '${0} --help'"
+    ;;
+esac
+done
