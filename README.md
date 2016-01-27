@@ -1,3 +1,5 @@
+[![License](http://img.shields.io/:license-mit-blue.svg)](http://doge.mit-license.org)
+
 # ShowIP
 
 A simple script to determine your machine's internal and external IP address.
