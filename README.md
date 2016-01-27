@@ -14,7 +14,9 @@ $ showip -e # Show external IP address
 ## Dependencies
 
 ```sh
+ifconfig (!)
 curl
+grep
 ```
 
 ## Author
