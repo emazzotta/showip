@@ -11,6 +11,14 @@ $ showip -i # Show internal IP address(es)
 $ showip -i 192 # Show internal IP address(es) that contain 192
 $ showip -e # Show external IP address
 ```
+
+## Installation
+
+```sh
+sudo curl -o /usr/bin/showip https://raw.githubusercontent.com/emazzotta/showip/master/showip 
+sudo chmod u+x /usr/bin/showip
+```
+
 ## Dependencies
 
 ```sh
