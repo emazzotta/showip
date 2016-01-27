@@ -7,9 +7,9 @@ An internet connection is needed, to determine the external ip address (duh).
 ## Usage
 
 ```sh
-$ showip -i # Show internal IP address(es)
-$ showip -i 192 # Show internal IP address(es) that contain 192
-$ showip -e # Show external IP address
+showip -i # Show internal IP address(es)
+showip -i 192 # Show internal IP address(es) that contain 192
+showip -e # Show external IP address
 ```
 
 ## Installation
