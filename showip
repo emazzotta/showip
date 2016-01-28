@@ -14,7 +14,7 @@ case $i in
         curl -s https://4.ifcfg.me/
     ;;
     -h|--help)
-        echo "Usage: ${0} [-e] [-i]"
+        echo "Usage: ${0} [-e] [-i] [-v6]"
         echo "Help: Show external or internal IP address."
         echo "Options:"
         echo "  -i, --internal    Show internal IP address. Additional parameter to be grepped for can be specified"
