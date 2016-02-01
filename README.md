@@ -12,13 +12,14 @@ An internet connection is needed, to determine the external ip address (duh).
 showip -i # Show internal IP address(es)
 showip -e # Show external IP address
 showip -v6 # Show IPv6 address(es)
+showip -u # Update this script
 ```
 
 ## Installation
 
 ``` sh
-curl https://raw.githubusercontent.com/emazzotta/showip/master/showip > /usr/local/bin/showip
-chmod 755 /usr/local/bin/showip
+curl -s https://raw.githubusercontent.com/emazzotta/showip/master/showip > /usr/local/bin/showip
+[[ $? == 0 ]] && echo "Successfully downloaded and installed" || echo "Problem downloading/installing"
 ```
 
 ## Dependencies

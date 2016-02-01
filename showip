@@ -16,11 +16,7 @@ case $i in
     -u|--update)
         echo "Updating..."
         curl -s https://raw.githubusercontent.com/emazzotta/showip/master/showip > /usr/local/bin/showip
-        if [[ "$?" == "0" ]]; then
-            echo "Updating sucessful!"
-        else
-            echo "Something went wrong..."
-        fi
+        [[ $? == 0 ]] && echo "Successfully downloaded and installed" || echo "Problem downloading/installing"
     ;;
     -h|--help)
         echo "Usage: ${0} [-e] [-i] [-v6]"
