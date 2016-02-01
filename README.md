@@ -8,7 +8,7 @@ An internet connection is needed, to determine the external ip address (duh).
 
 ## Usage
 
-```sh
+``` sh
 showip -i # Show internal IP address(es)
 showip -e # Show external IP address
 showip -v6 # Show IPv6 address(es)
@@ -16,14 +16,14 @@ showip -v6 # Show IPv6 address(es)
 
 ## Installation
 
-```sh
-sudo curl https://raw.githubusercontent.com/emazzotta/showip/master/showip > /usr/bin/showip
-sudo chmod 755 /usr/bin/showip
+``` sh
+sudo curl https://raw.githubusercontent.com/emazzotta/showip/master/showip > /usr/local/bin/showip
+sudo chmod 755 /usr/local/bin/showip
 ```
 
 ## Dependencies
 
-```sh
+``` sh
 ifconfig
 curl
 grep
