@@ -17,8 +17,8 @@ showip -v6 # Show IPv6 address(es)
 ## Installation
 
 ``` sh
-sudo curl https://raw.githubusercontent.com/emazzotta/showip/master/showip > /usr/local/bin/showip
-sudo chmod 755 /usr/local/bin/showip
+curl https://raw.githubusercontent.com/emazzotta/showip/master/showip > /usr/local/bin/showip
+chmod 755 /usr/local/bin/showip
 ```
 
 ## Dependencies
