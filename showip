@@ -19,7 +19,7 @@ case $i in
         [[ $? == 0 ]] && echo "Successfully downloaded and installed" || echo "Problem downloading/installing"
     ;;
     -h|--help)
-        echo "Usage: ${0} [-e] [-i] [-v6]"
+        echo "Usage: ${0} [-e] [-i] [-v6] [-u]"
         echo "Help: Show external or internal IP address."
         echo "Options:"
         echo "  -i, --internal    Show internal IP address. Additional parameter to be grepped for can be specified"
@@ -28,7 +28,7 @@ case $i in
         echo "  -u, --update      Update this script."
     ;;
     *)
-        echo -e "Unrecognized parameter: ${i}\nTry '${0} --help'"
+        echo -e "Unrecognized parameter: ${i}\nTry '$(basename ${0}) --help'"
     ;;
 esac
 done
