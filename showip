@@ -13,6 +13,15 @@ case $i in
     -e|--external)
         curl -s https://4.ifcfg.me/
     ;;
+    -u|--update)
+        echo "Updating..."
+        curl -s https://raw.githubusercontent.com/emazzotta/showip/master/showip > /usr/local/bin/showip
+        if [[ "$?" == "0" ]]; then
+            echo "Updating sucessful!"
+        else
+            echo "Something went wrong..."
+        fi
+    ;;
     -h|--help)
         echo "Usage: ${0} [-e] [-i] [-v6]"
         echo "Help: Show external or internal IP address."
@@ -20,6 +29,7 @@ case $i in
         echo "  -i, --internal    Show internal IP address. Additional parameter to be grepped for can be specified"
         echo "  -e, --external    Show external IP address."
         echo "  -v6, --ipv6       Show IPv6 address."
+        echo "  -u, --update      Update this script."
     ;;
     *)
         echo -e "Unrecognized parameter: ${i}\nTry '${0} --help'"
