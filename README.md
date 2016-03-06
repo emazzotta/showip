@@ -18,7 +18,7 @@ showip -u # Update this script
 ## Installation
 
 ``` sh
-curl -s https://raw.githubusercontent.com/emazzotta/showip/master/showip > /usr/local/bin/showip
+sudo curl -s https://raw.githubusercontent.com/emazzotta/showip/master/showip > /usr/bin/showip
 [[ $? == 0 ]] && echo "Successfully downloaded and installed" || echo "Problem downloading/installing"
 ```
 
