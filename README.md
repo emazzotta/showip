@@ -1,4 +1,4 @@
-[![License](http://img.shields.io/:license-mit-blue.svg?style=flat-square)](http://doge.mit-license.org)
+[![License](http://img.shields.io/:license-mit-blue.svg)](http://doge.mit-license.org)
 
 # ShowIP
 
@@ -18,8 +18,7 @@ showip -u # Update this script
 ## Installation
 
 ``` sh
-sudo curl -s https://raw.githubusercontent.com/emazzotta/showip/master/showip > /usr/bin/showip
-[[ $? == 0 ]] && echo "Successfully downloaded and installed" || echo "Problem downloading/installing"
+bash < <(curl -fsSL https://raw.githubusercontent.com/emazzotta/showip/master/install.sh)
 ```
 
 ## Dependencies
@@ -32,9 +31,8 @@ grep
 
 ## Author
 
-[Emanuele Mazzotta](mailto:hello@mazzotta.me?subject=ShowIP Github Project&body=Hi Emanuele)
+[Emanuele Mazzotta](mailto:hello@mazzotta.me)
 
 ## License
 
 [MIT License](LICENSE.md) © Emanuele Mazzotta
-

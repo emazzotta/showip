@@ -17,14 +17,13 @@ case $i in
     ;;
     -u|--update)
         echo "Updating..."
-        curl -s https://raw.githubusercontent.com/emazzotta/showip/master/showip > /usr/local/bin/showip
-        [[ $? == 0 ]] && echo "Successfully downloaded and installed" || echo "Problem downloading/installing"
+        bash < <(curl -fsSL https://raw.githubusercontent.com/emazzotta/showip/master/install.sh)
     ;;
     -h|--help)
         echo "Usage: $(basename ${0}) [-e] [-i] [-v6] [-u]"
         echo "Help: Show external or internal IP address."
         echo "Options:"
-        echo "  -i, --internal    Show internal IP address. Additional parameter to be grepped for can be specified"
+        echo "  -i, --internal    Show internal IP address." 
         echo "  -e, --external    Show external IP address."
         echo "  -v6, --ipv6       Show IPv6 address."
         echo "  -u, --update      Update this script."
