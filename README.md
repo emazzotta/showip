@@ -1,4 +1,4 @@
-[![License](http://img.shields.io/:license-mit-blue.svg)](http://doge.mit-license.org)
+[![License](http://img.shields.io/:license-mit-blue.svg)](https://emanuelemazzotta.com/mit-license)
 
 # ShowIP
 
@@ -33,6 +33,3 @@ grep
 
 [Emanuele Mazzotta](mailto:hello@mazzotta.me)
 
-## License
-
-[MIT License](LICENSE.md) © Emanuele Mazzotta
