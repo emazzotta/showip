@@ -1,6 +1,4 @@
-[![License](http://img.shields.io/:license-mit-blue.svg)](https://emanuelemazzotta.com/mit-license)
-
-# ShowIP
+# ShowIP [![License](http://img.shields.io/:license-mit-blue.svg)](https://emanuelemazzotta.com/mit-license)
 
 A simple script to determine your machine's internal and external IP address.
 
