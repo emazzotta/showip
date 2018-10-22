@@ -13,7 +13,7 @@ case $i in
         ifconfig | grep -Eo 'inet6([[:space:]]|-)?(Adresse|address|addr)?[:]?([[:space:]])?[0-9a-z:]*' | grep -Eo '[0-9A-Za-z]{4}[:]{1}([0-9A-Za-z]*\:){1,10}[0-9A-Za-z]*' | grep -v '::1'
     ;;
     -e|--external)
-        curl -s https://4.ifcfg.me/
+        curl -fSsL ifconfig.co
     ;;
     -u|--update)
         echo "Updating..."
