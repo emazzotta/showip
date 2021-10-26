@@ -17,7 +17,7 @@ case $i in
         bash < <(curl -fsSL https://raw.githubusercontent.com/emazzotta/showip/master/install.sh)
     ;;
     -h|--help)
-        echo "Usage: $(basename ${0}) [-e] [-i] [-v6] [-u]"
+        echo "Usage: $(basename ${0}) [-e] [-i] [-u]"
         echo "Help: Show external or internal IP address."
         echo "Options:"
         echo "  -i, --internal    Show internal IP address." 

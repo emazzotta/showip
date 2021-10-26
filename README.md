@@ -9,7 +9,6 @@ An internet connection is needed, to determine the external ip address (duh).
 ``` sh
 showip -i # Show internal IP address(es)
 showip -e # Show external IP address
-showip -v6 # Show IPv6 address(es)
 showip -u # Update this script
 ```
 
