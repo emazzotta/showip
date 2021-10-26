@@ -9,11 +9,8 @@ case $i in
     -i|--internal)
         ifconfig | grep -Eo 'inet (Adresse:|address:|addr:)?([0-9]*\.){3}[0-9]*' | grep -Eo '([0-9]*\.){3}[0-9]*' | grep -v '127.0.0.1'
     ;;
-    -v6|--ipv6)
-        ifconfig | grep -Eo 'inet6([[:space:]]|-)?(Adresse|address|addr)?[:]?([[:space:]])?[0-9a-z:]*' | grep -Eo '[0-9A-Za-z]{4}[:]{1}([0-9A-Za-z]*\:){1,10}[0-9A-Za-z]*' | grep -v '::1'
-    ;;
     -e|--external)
-        curl -fSsL ifconfig.co
+        curl -fSsL --ipv4 ifconfig.co
     ;;
     -u|--update)
         echo "Updating..."
@@ -25,7 +22,6 @@ case $i in
         echo "Options:"
         echo "  -i, --internal    Show internal IP address." 
         echo "  -e, --external    Show external IP address."
-        echo "  -v6, --ipv6       Show IPv6 address."
         echo "  -u, --update      Update this script."
     ;;
     *)
